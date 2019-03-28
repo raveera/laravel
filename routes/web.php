@@ -12,8 +12,12 @@
 */
 
 Route::get('/', function () {
-    return view('index');
+    return view('company-list');
 });
+Route::get('/login', function () {
+    return view('login-com');
+});
+
 
 Route::get('registercom', 'registerController@registercom');
 Route::post('cooperative/public/submit', 'registerController@submit');

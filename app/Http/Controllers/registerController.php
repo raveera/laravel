@@ -33,5 +33,7 @@ class registerController extends Controller
         ];
         $companyModel = new companyModel($data);
         $companyModel->save();
+
+        return view('company-list');
     }
 }

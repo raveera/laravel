@@ -11,11 +11,6 @@
     a:visited {color: #ffffff; text-decoration: none }
     a:hover {color: PeachPuff; text-decoration: none}
     /* font */
-    #a1 {
-    font-family: TH SarabunPSK;
-    font-size: 25px;
-    <color:black></color:black>;
-    }
     #p1 {
     font-family: TH SarabunPSK;
     font-size: 40px;
@@ -44,9 +39,13 @@
   </style>
     <!-- Bootstrap -->
     <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/3.4.1/css/bootstrap.min.css" integrity="sha384-HSMxcRTRxnN+Bdg0JdbxYKrThecOKuH5zCYotlSAcp1+c8xmyTe9GYg1l9a69psu" crossorigin="anonymous">
+
+    <!-- HTML5 shim and Respond.js for IE8 support of HTML5 elements and media queries -->
+    <!-- WARNING: Respond.js doesn't work if you view the page via file:// -->
+    <!--[if lt IE 9]>
       <script src="https://oss.maxcdn.com/html5shiv/3.7.3/html5shiv.min.js"></script>
       <script src="https://oss.maxcdn.com/respond/1.4.2/respond.min.js"></script>
-
+    <![endif]-->
   </head>
 <body>
     <nav class="navbar navbar-inverse navbar-static-top"่ >
@@ -57,25 +56,18 @@
             <span class="icon-bar"></span>
             <span class="icon-bar"></span>
           </button>
-          <a class="navbar-brand" href="#" id="p1">ระบบสหกิจหลักสูตรคอมพิวเตอร์ธุรกิจ YRU</a>
+          <a class="navbar-brand" href="#" id="p1">ระบบสหกิจ หลักสูตรคอมพิวเตอร์ธุรกิจ YRU</a>
         </div>
         <div id="navbar" class="navbar-collapse collapse">
-          <ul class="nav navbar-nav navbar-right">
-            <h4 id="para1" class="dropdown">
-                <a href="company-list">สถานประกอบการ</a> |
-                <a href="#" class="dropdown-toggle" data-toggle="dropdown" role="button" aria-haspopup="true" aria-expanded="false" >ลงทะเบียน <span class="caret"></span></a>
-              <ul class="dropdown-menu" id="para2">
-                <li><a href="register">นักศึกษา</a></li>
-                <li><a href="register4">สถานประกอบการ</a></li>
-              </ul>
-               </h4>
-
-          </ul>
+            <ul class="nav navbar-nav navbar-right">
+                <h4 id="para1" class="dropdown">
+                    <a href="company-list">สถานประกอบการ</a>
+                    <a href="login" id="para2"><span class="glyphicon glyphicon-log-in" aria-hidden="true"> Login</span></a>
+                </h4>
+            </ul>
         </div><!--/.nav-collapse -->
       </div>
     </nav>
-
-
     <div class="container">
       @yield('content')
       <hr>
