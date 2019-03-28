@@ -12,30 +12,9 @@
 */
 
 Route::get('/', function () {
-    return view('welcome');
+    return view('index');
 });
 
-Route::get('index', function () {
-    return view('child');
-});
-Route::get('register', function () {
-    return view('register.register-stu');
-});
-Route::get('register2', function () {
-    return view('register.register-tea');
-});
-Route::get('register3', function () {
-    return view('register.register-off');
-});
-Route::get('register4', function () {
-    return view('register.register-com');
-});
-Route::get('company-list', function () {
-    return view('register.company-list');
-});
-Route::get('stu_company', function () {
-    return view('register.stu_company');
-});
-Route::get('formup', function () {
-    return view('register.formup');
-});
+Route::get('registercom', 'registerController@registercom');
+Route::post('cooperative/public/submit', 'registerController@submit');
+

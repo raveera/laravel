@@ -57,20 +57,15 @@
             <span class="icon-bar"></span>
             <span class="icon-bar"></span>
           </button>
-          <a class="navbar-brand" href="#" id="p1">ระบบสหกิจ YRU</a>
+          <a class="navbar-brand" href="#" id="p1">ระบบสหกิจหลักสูตรคอมพิวเตอร์ธุรกิจ YRU</a>
         </div>
         <div id="navbar" class="navbar-collapse collapse">
           <ul class="nav navbar-nav navbar-right">
             <h4 id="para1" class="dropdown">
                 <a href="company-list">สถานประกอบการ</a> |
-                <a href="#">เอกสารสหกิจ</a> |
-                <a href="#">รายงานผล</a>  |
-                <a href="#">ประเมินผล</a>   |
                 <a href="#" class="dropdown-toggle" data-toggle="dropdown" role="button" aria-haspopup="true" aria-expanded="false" >ลงทะเบียน <span class="caret"></span></a>
               <ul class="dropdown-menu" id="para2">
                 <li><a href="register">นักศึกษา</a></li>
-                <li><a href="register2">อาจารย์</a></li>
-                <li><a href="register3">เจ้าหน้าที่</a></li>
                 <li><a href="register4">สถานประกอบการ</a></li>
               </ul>
                </h4>
