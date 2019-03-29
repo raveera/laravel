@@ -51,21 +51,8 @@
     <nav class="navbar navbar-inverse navbar-static-top"่ >
       <div class="container-fluid">
         <div class="navbar-header">
-          <button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target="#navbar" aria-expanded="false" aria-controls="navbar">
-            <span class="icon-bar"></span>
-            <span class="icon-bar"></span>
-            <span class="icon-bar"></span>
-          </button>
-          <a class="navbar-brand" href="#" id="p1">ระบบสหกิจ หลักสูตรคอมพิวเตอร์ธุรกิจ YRU</a>
-        </div>
-        <div id="navbar" class="navbar-collapse collapse">
-            <ul class="nav navbar-nav navbar-right">
-                <h4 id="para1" class="dropdown">
-                    <a href="company-list">สถานประกอบการ</a>
-                    <a href="login" id="para2"><span class="glyphicon glyphicon-log-in" aria-hidden="true"> Login</span></a>
-                </h4>
-            </ul>
-        </div><!--/.nav-collapse -->
+            <a class="navbar-brand" href="index" id="p1">ระบบสหกิจ หลักสูตรคอมพิวเตอร์ธุรกิจ YRU</a>  </div>
+            <div class="btn pull-right"><a href="login" id="para2" ><span class="glyphicon glyphicon-log-in" aria-hidden="true"> Login</span></a></div>
       </div>
     </nav>
     <div class="container">

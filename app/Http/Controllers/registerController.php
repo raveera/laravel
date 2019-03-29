@@ -11,6 +11,11 @@ class registerController extends Controller
         return view('registercom');
     }
 
+    public function index() {
+        $companys = companyModel::all()->toArray();
+        return view('company-list',compact('companys'));
+    }
+
     public function submit(Request $request){
         $username = $request ->post('username');
         $password = $request ->post('password');
@@ -20,6 +25,7 @@ class registerController extends Controller
         $detail = $request ->post('detail');
         $tel = $request ->post('tel');
         $email = $request ->post('email');
+        $num = $request ->post('num');
 
         $data =[
             'username' => $username,
@@ -29,11 +35,13 @@ class registerController extends Controller
             'address' => $address,
             'detail' => $detail,
             'tel' => $tel,
-            'email' => $email
+            'email' => $email,
+            'num' => $num
         ];
         $companyModel = new companyModel($data);
         $companyModel->save();
 
-        return view('company-list');
+        $companys = companyModel::all()->toArray();
+        return view('company-list',compact('companys'));
     }
 }

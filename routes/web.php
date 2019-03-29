@@ -11,14 +11,14 @@
 |
 */
 
-Route::get('/', function () {
-    return view('company-list');
-});
-Route::get('/login', function () {
+Route::get('index', 'registerController@index');
+
+
+Route::get('login', function () {
     return view('login-com');
 });
 
 
 Route::get('registercom', 'registerController@registercom');
-Route::post('cooperative/public/submit', 'registerController@submit');
+Route::post('submit', 'registerController@submit');
 

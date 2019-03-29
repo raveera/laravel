@@ -2,7 +2,7 @@
 @section('title', 'ลงทะเบียนสถานประกอบการ')
 @section('content')
     <div class="container" id="body2">
-      <form class="form-singin" action="cooperative/public/submit" method="post" >
+      <form class="form-singin" action="submit" method="post" >
         {{ csrf_field() }}
           <h2 class="form-signin-heading" id="blackhead" align="center">ลงทะเบียนสถานประกอบการ</h2><hr>
             <div class="col-sm-2"></div>
@@ -22,18 +22,21 @@
                 <input type="text" name="namecom" class="form-control" id="text" placeholder="ชื่อ-สกุล"required> <br>
                 <label>รายละเอียดงาน *</label>
                 <input type="text" name="detail" class="form-control" id="text" placeholder="รายละเอียดงาน"required> <br>
+                <label>จำนวนที่รับ</label>
+                <input type="text" name="num" class="form-control" id="text" placeholder="จำนวนที่รับ "> <br>
                 <label>ที่อยู่ปัจจุบัน *</label>
                 <input type="text" name="address" class="form-control" id="text" placeholder="ที่อยู่ปัจจุบัน "required> <br>
                 <label>เบอร์โทรศัพท์ติดต่อ *</label>
                 <input type="text" name="tel" class="form-control" id="text" placeholder="เบอร์โทรศัพท์ "required> <br>
                 <label>E-mail</label>
                 <input type="text" name="email" class="form-control" id="text" placeholder="E-mail "> <br>
+
                 </div>
                 </div>
               <div align='center'>
               <label >
                 <button class="btn btn-lg btn-primary btn" type="submit">submit</button>
-                <button class="btn btn-lg btn-defult btn"><a href="login-tea">cancel</button></a>
+                <button class="btn btn-lg btn-defult btn"><a href="login-com">cancel</button></a>
               </label>
               </div>
 

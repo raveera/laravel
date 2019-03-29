@@ -16,14 +16,15 @@
     </tr>
   </thead>
   <tbody>
-    <tr>
-      <th scope="row">1</th>
-      <td>มหาวิยาลัยราชภัฏยะลา</td>
-      <td>ดูรายละเอียด</td>
-      <td>123 ยะลา</td>
-      <td>6 คน</td>
-    </tr>
-
+    @foreach ($companys as $row )
+        <tr>
+            <td>{{ $row['id'] }}</td>
+            <td>{{ $row['namecom'] }}</td>
+            <td>{{ $row['detail'] }}</td>
+            <td>{{ $row['address'] }}</td>
+            <td>{{ $row['num'] }}</td>
+        </tr>
+    @endforeach
   </tbody>
 </table>
     <!-- jQuery (necessary for Bootstrap's JavaScript plugins) -->

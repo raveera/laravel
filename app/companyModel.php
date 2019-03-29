@@ -9,6 +9,6 @@ class companyModel extends Model
     protected $table = 'companysregister';
     protected $fillable = [
         "username" , "password" , "repassword" ,
-        "namecom" , "address" , "detail" , "tel" , "email"
+        "namecom" , "address" , "detail" , "tel" , "email" , "num"
     ];
 }

@@ -23,6 +23,7 @@ class CreateCompanysregisterTable extends Migration
             $table->string('detail');
             $table->string('tel');
             $table->string('email');
+            $table->string('num');
             $table->timestamps();
         });
     }
