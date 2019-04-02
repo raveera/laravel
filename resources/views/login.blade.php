@@ -1,26 +1,23 @@
 @extends('layouts.index')
 @section('title', 'Login')
 @section('content')
-    <div class="container">
-
+    <div class="container col-md-4" ></div>
+    <div class="container col-md-4">
       <form class="form-signin">
-        <h2 class="form-signin-heading" id="blackhead">เข้าสู่ระบบ</h2>
-        <div class="col-md-5">
+        <h2 class="form-signin-heading" align="center">เข้าสู่ระบบ</h2>
         <label>Username</label>
-        <input type="text" class="form-control" id="text" placeholder="Username"> <br>
+        <input type="email" id="inputEmail" class="form-control" placeholder="Username" required="" autofocus=""> <br>
         <label>Password</label>
-        <input type="password" class="form-control" id="text" placeholder="Password">
+        <input type="password" id="inputPassword" class="form-control" placeholder="Password" required="">
         <div class="checkbox">
           <label>
             <input type="checkbox" value="remember-me"> Remember me
           </label>
         </div>
-        <button class="btn btn-lg btn-primary btn" type="submit">Log in</button>
-        <button class="btn btn-lg btn-primary btn" type="submit"><a href="registercom">Register</button></a>
+        <button class="btn btn-lg btn-primary btn-block" type="submit">Sign in</button>
       </form>
-
     </div>
-
+    <div class="container col-md-4"></div>
     <!-- jQuery (necessary for Bootstrap's JavaScript plugins) -->
     <script src="https://code.jquery.com/jquery-1.12.4.min.js" integrity="sha384-nvAa0+6Qg9clwYCGGPpDQLVpLNn0fRaROjHqs13t4Ggj3Ez50XnGQqc/r8MhnRDZ" crossorigin="anonymous"></script>
     <!-- Include all compiled plugins (below), or include individual files as needed -->

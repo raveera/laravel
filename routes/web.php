@@ -12,13 +12,21 @@
 */
 
 Route::get('index', 'registerController@index');
+Route::get('/', 'registerController@index');
 
 
 Route::get('login', function () {
-    return view('login-com');
+    return view('login');
 });
 
 
 Route::get('registercom', 'registerController@registercom');
-Route::post('submit', 'registerController@submit');
+Route::get('submitcom', 'registerController@submit');
 
+Route::get('/test',function(){
+    return view('child');
+});
+
+Route::get('/regiserstu',function(){
+    return view('regiserstu');
+});

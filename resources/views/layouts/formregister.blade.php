@@ -52,41 +52,65 @@
     <nav class="navbar navbar-inverse navbar-static-top"่ >
       <div class="container-fluid">
         <div class="navbar-header">
+
           <button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target="#navbar" aria-expanded="false" aria-controls="navbar">
             <span class="icon-bar"></span>
             <span class="icon-bar"></span>
             <span class="icon-bar"></span>
           </button>
-            <a class="navbar-brand" href="index" id="p1">ระบบสหกิจ YRU</a>
+          <a class="navbar-brand" href="index" id="p1">ระบบสหกิจ YRU</a>
         </div>
         <div id="navbar" class="navbar-collapse collapse">
           <ul class="nav navbar-nav navbar-right">
                <div class="btn pull-right">
-                    <a href="login" id="register">เข้าสู่ระบบ</a>
+                    <a href="login" id="register" >
+                        เข้าสู่ระบบ  </a> </span>
                 </div>
-            <div class="btn pull-right ">
-                <div class="dropdown">
+        <div class="btn pull-right ">
+            <div class="dropdown">
                     <span class=" dropdown-toggle" id="register" data-toggle="dropdown" role="button" aria-hidden="true">
                     ลงทะเบียน
-                    <span  class="caret" >
-                    </span></span>
-                    <ul class="dropdown-menu" id="para2">
-                        <li><a href="regiserstu">นักศึกษา</a></li>
-                        <li><a href="login-tea">อาจารย์</a></li>
-                        <li><a href="login-off">เจ้าหน้าที่</a></li>
-                        <li><a href="registercom">สถานประกอบการ</a></li>
-                    </ul>
-                </div>
+                    <span  class="caret" ></span>
+                    </span>
+                <ul class="dropdown-menu" id="para2">
+                    <li><a href="regiserstu">นักศึกษา</a></li>
+                    <li><a href="login-tea">อาจารย์</a></li>
+                    <li><a href="login-off">เจ้าหน้าที่</a></li>
+                    <li><a href="registercom">สถานประกอบการ</a></li>
+                </ul>
             </div>
+        </div>
+
+
           </ul>
         </div><!--/.nav-collapse -->
       </div>
     </nav>
-    @yield('content')
+    <div class="container" id="body2">
+        @yield('head')
+        {{ csrf_field() }}
+          <h2 class="form-signin-heading" id="blackhead" align="center">@yield('title')</h2><hr>
+            <div class="col-sm-2"></div>
+              <div class="col-sm-4" >
+              <h4 id="body"><b>บัญชีลงทะเบียน <b></h4>
+              <label>Username * </label>
+              <input type="text" class="form-control" id="text" placeholder="Username"required> <br>
+              <label>Password *</label>
+              <input type="password" class="form-control" id="text" placeholder="Password"required> <br>
+              <label for="psw-repeat">Repeat Password *</label>
+              <input type="password" class="form-control" id="text" placeholder="Repeat Password" name="psw-repeat" required><br>
+            </div>
+                 @yield('content')
+            <div align='center'>
+              <label >
+                <button class="btn btn-lg btn-primary btn" type="submit">บันทึก</button>
+                <button class="btn btn-lg btn-defult btn"><a href="login">ยกเลิก</button></a>
+              </label>
+              </div>
+              <div class="col-sm-2"></div>
+      </form>
+    </div>
+
 </body>
 </html>
-
-
-
-
 

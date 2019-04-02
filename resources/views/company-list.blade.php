@@ -8,10 +8,11 @@
     <caption>รายชื่อสถานประกอบการ</caption>
     <thead>
     <tr>
-      <th scope="col">ลำดับที่</th>
+      <th scope="col" >ลำดับที่</th>
       <th scope="col">สถานประกอบการ</th>
       <th scope="col">รายละเอียด</th>
-      <th scope="col">ที่อยู่</th>
+      <th scope="col"class="text-center">ที่อยู่</th>
+      <th scope="col">เบอร์โทร</th>
       <th scope="col">จำนวนที่รับ</th>
     </tr>
   </thead>
@@ -22,6 +23,7 @@
             <td>{{ $row['namecom'] }}</td>
             <td>{{ $row['detail'] }}</td>
             <td>{{ $row['address'] }}</td>
+            <td>{{ $row['tel'] }}</td>
             <td>{{ $row['num'] }}</td>
         </tr>
     @endforeach
