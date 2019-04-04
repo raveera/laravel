@@ -5,15 +5,15 @@
 <table class="table">
   <thead class="thead-dark">
   <table class="table table-hover table-bordered">
-    <caption>รายชื่อสถานประกอบการ</caption>
+    <p id="black">รายชื่อสถานประกอบการ</p>
     <thead>
     <tr>
-      <th scope="col" >ลำดับที่</th>
-      <th scope="col">สถานประกอบการ</th>
-      <th scope="col">รายละเอียด</th>
-      <th scope="col"class="text-center">ที่อยู่</th>
-      <th scope="col">เบอร์โทร</th>
-      <th scope="col">จำนวนที่รับ</th>
+      <th scope="col" class="text-center">ลำดับที่</th>
+      <th scope="col" class="text-center">สถานประกอบการ</th>
+      <th scope="col" class="text-center">รายละเอียด</th>
+      <th scope="col" class="text-center">ที่อยู่</th>
+      <th scope="col" class="text-center">เบอร์โทร</th>
+      <th scope="col" class="text-center">จำนวนที่รับ</th>
     </tr>
   </thead>
   <tbody>

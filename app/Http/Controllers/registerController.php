@@ -11,6 +11,18 @@ class registerController extends Controller
         return view('registercom');
     }
 
+    public function registerstu() {
+        return view('registerstu');
+    }
+
+    public function registertea() {
+        return view('registertea');
+    }
+
+    public function registeroff() {
+        return view('registeroff');
+    }
+
     public function index() {
         $companys = companyModel::all()->toArray();
         return view('company-list',compact('companys'));

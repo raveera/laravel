@@ -1,25 +1,20 @@
 @extends('layouts.formregister')
-@section('title', 'ลงทะเบียนนักศึกษา')
+@section('title', 'ลงทะเบียนเจ้าหน้าที่')
 @section('head')
-    <form class="form-singin" action="submitstu" method="get" >
+    <form class="form-singin" action="submitoff" method="get" >
 @endsection
 
 @section('content')
     <div class="col-sm-4" id="container1" >
-        <h4 id="body"><b>ข้อมูลส่วนตัวนักศึกษา<b></h4>
-            <label>รหัสนักศึกษา *</label>
-                <input type="text" class="form-control" id="text" placeholder="รหัสนักศึกษา "required> <br>
-            <label>ชื่อ - นามสกุลนักศึกษา  *</label>
+        <h4 id="body"><b>ข้อมูลส่วนตัวเจ้าหน้าที่<b></h4>
+            <label>ชื่อ - นามสกุล*</label>
                 <input type="password" class="form-control" id="text" placeholder="ชื่อ-สกุล"required> <br>
-            <label>สาขาวิชา *</label>
-                <input type="text" class="form-control" id="text" placeholder="สาขาวิชา "required> <br>
             <label for="sel1">คณะ *</label>
                 <input type="text" class="form-control" id="text" placeholder="คณะ "required> <br>
-            <label for="sel1">ปีการศึกษา *</label>
-                <select class="form-control" id="text">
-                    <option>2561</option>
-                    <option>2562</option>
-                </select><br>
+            <label for="sel1">หลักสูตร *</label>
+                <input type="text" class="form-control" id="text" placeholder="หลักสูตร "required> <br>
+            <label>สาขาวิชา *</label>
+                <input type="text" class="form-control" id="text" placeholder="สาขาวิชา "required> <br>
             <label>ที่อยู่ปัจจุบัน*</label>
                 <input type="text" class="form-control" id="text" placeholder="ที่อยู่ปัจจุบัน "required> <br>
             <label>เบอร์โทรศัพท์*</label>

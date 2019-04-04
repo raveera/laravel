@@ -7,9 +7,7 @@
     <!-- The above 3 meta tags *must* come first in the head; any other head content must come *after* these tags -->
     <title>@yield('title')</title>
   <style type='text/css'>
-    a:link {color: #ffffe6; text-decoration: none}
-    a:visited {color: #ffffff; text-decoration: none }
-    a:hover {color: PeachPuff; text-decoration: none}
+
     /* font */
     #p1 {
     font-family: TH SarabunPSK;
@@ -37,6 +35,16 @@
     font-size: 25px;
     color: white;
     }
+    #black{
+        font-family:TH SarabunPSK;
+        font-size: 25px;
+        color: black;
+    }
+    #black1{
+        font-family:TH SarabunPSK;
+        font-size: 20px;
+        color: black;
+    }
   </style>
     <!-- Bootstrap -->
     <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/3.4.1/css/bootstrap.min.css" integrity="sha384-HSMxcRTRxnN+Bdg0JdbxYKrThecOKuH5zCYotlSAcp1+c8xmyTe9GYg1l9a69psu" crossorigin="anonymous">
@@ -61,9 +69,21 @@
         </div>
         <div id="navbar" class="navbar-collapse collapse">
           <ul class="nav navbar-nav navbar-right">
-               <div class="btn pull-right">
-                    <a href="login" id="register">เข้าสู่ระบบ</a>
-                </div>
+
+                <div class="btn pull-right">
+                    <div class="dropdown">
+                        <span class=" dropdown-toggle" id="register" data-toggle="dropdown" role="button" aria-hidden="true">
+                        เข้าสู่ระบบ
+                        <span  class="caret" >
+                        </span></span>
+                        <ul class="dropdown-menu" id="para2">
+                            <li><a href="loginstu">นักศึกษา</a></li>
+                            <li><a href="logintea">อาจารย์</a></li>
+                            <li><a href="loginoff">เจ้าหน้าที่</a></li>
+                            <li><a href="logincom">สถานประกอบการ</a></li>
+                        </ul>
+                    </div>
+                    </div>
             <div class="btn pull-right ">
                 <div class="dropdown">
                     <span class=" dropdown-toggle" id="register" data-toggle="dropdown" role="button" aria-hidden="true">
@@ -71,13 +91,16 @@
                     <span  class="caret" >
                     </span></span>
                     <ul class="dropdown-menu" id="para2">
-                        <li><a href="regiserstu">นักศึกษา</a></li>
-                        <li><a href="login-tea">อาจารย์</a></li>
-                        <li><a href="login-off">เจ้าหน้าที่</a></li>
+                        <li><a href="registerstu">นักศึกษา</a></li>
+                        <li><a href="registertea">อาจารย์</a></li>
+                        <li><a href="registeroff">เจ้าหน้าที่</a></li>
                         <li><a href="registercom">สถานประกอบการ</a></li>
                     </ul>
                 </div>
             </div>
+            <div class="btn pull-right ">
+                    <a href="index" id="register">รายชื่อสถานประกอบการ</a>
+                </div>
           </ul>
         </div><!--/.nav-collapse -->
       </div>

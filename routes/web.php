@@ -23,10 +23,21 @@ Route::get('login', function () {
 Route::get('registercom', 'registerController@registercom');
 Route::get('submitcom', 'registerController@submit');
 
-Route::get('/test',function(){
-    return view('child');
+Route::get('/registerstu','registerController@registerstu');
+Route::get('/registertea','registerController@registertea');
+Route::get('/registeroff','registerController@registeroff');
+
+
+Route::get('/stu_company',function(){
+    return view('stu_company');
 });
 
-Route::get('/regiserstu',function(){
-    return view('regiserstu');
+Route::get('/reportcoop',function(){
+    return view('reportcoop');
 });
+
+Route::get('/loginoff','loginController@loginoff');
+Route::get('/loginstu','loginController@loginstu');
+Route::get('/logincom','loginController@logincom');
+Route::get('/logintea','loginController@logintea');
+

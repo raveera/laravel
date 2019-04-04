@@ -1,12 +1,13 @@
 @extends('layouts.index')
 @section('title', 'Login')
 @section('content')
+    <form class="form-singin" action="index" method="get" >
     <div class="container col-md-4" ></div>
     <div class="container col-md-4">
       <form class="form-signin">
-        <h2 class="form-signin-heading" align="center">เข้าสู่ระบบ</h2>
+        <h2 class="form-signin-heading" align="center">เข้าสู่ระบบนักศึกษา</h2>
         <label>Username</label>
-        <input type="email" id="inputEmail" class="form-control" placeholder="Username" required="" autofocus=""> <br>
+        <input type="text" id="inputEmail" class="form-control" placeholder="Username" required="" autofocus=""> <br>
         <label>Password</label>
         <input type="password" id="inputPassword" class="form-control" placeholder="Password" required="">
         <div class="checkbox">
@@ -14,10 +15,11 @@
             <input type="checkbox" value="remember-me"> Remember me
           </label>
         </div>
-        <button class="btn btn-lg btn-primary btn-block" type="submit">Sign in</button>
+        <button class="btn btn-lg btn-primary btn-block" type="submit">เข้าสู่ระบบ</button>
       </form>
     </div>
     <div class="container col-md-4"></div>
+    </form>
     <!-- jQuery (necessary for Bootstrap's JavaScript plugins) -->
     <script src="https://code.jquery.com/jquery-1.12.4.min.js" integrity="sha384-nvAa0+6Qg9clwYCGGPpDQLVpLNn0fRaROjHqs13t4Ggj3Ez50XnGQqc/r8MhnRDZ" crossorigin="anonymous"></script>
     <!-- Include all compiled plugins (below), or include individual files as needed -->
