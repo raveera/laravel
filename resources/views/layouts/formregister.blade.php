@@ -120,8 +120,8 @@
                 <button class="btn btn-lg btn-primary btn" type="submit">บันทึก</button>
                 <button class="btn btn-lg btn-defult btn"><a href="login">ยกเลิก</button></a>
               </label>
-              </div>
-              <div class="col-sm-2"></div>
+            </div>
+            <div class="col-sm-2"></div>
       </form>
     </div>
 

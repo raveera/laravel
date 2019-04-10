@@ -32,6 +32,14 @@ Route::get('/stu_company',function(){
     return view('stu_company');
 });
 
+Route::get('/stulist',function(){
+    return view('stulist');
+});
+
+Route::get('/savenote',function(){
+    return view('savenote');
+});
+
 Route::get('/reportcoop',function(){
     return view('reportcoop');
 });

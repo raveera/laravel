@@ -1,7 +1,7 @@
 @extends('layouts.index')
 @section('title', 'Login')
 @section('content')
-    <form class="form-singin" action="index" method="get" >
+    <form class="form-singin" action="savenote" method="get" >
     <div class="container col-md-4" ></div>
     <div class="container col-md-4">
       <form class="form-signin">
