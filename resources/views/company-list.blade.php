@@ -14,6 +14,7 @@
       <th scope="col" class="text-center">ที่อยู่</th>
       <th scope="col" class="text-center">เบอร์โทร</th>
       <th scope="col" class="text-center">จำนวนที่รับ</th>
+      <th scope="col" class="text-center">คลิกดูรายละเอียด</th>
     </tr>
   </thead>
   <tbody>
@@ -25,6 +26,7 @@
             <td>{{ $row['address'] }}</td>
             <td>{{ $row['tel'] }}</td>
             <td>{{ $row['num'] }}</td>
+            <td align="center"><a href="reportcoop"><button id="black1">คลิก</button></a></td>
         </tr>
     @endforeach
   </tbody>

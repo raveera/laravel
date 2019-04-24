@@ -8,7 +8,7 @@
             <div class="col-sm-2"></div>
                 <div class="col-sm-8" id="a1">
                     <label>วัน/เดือน/ปี</label>
-                        <input type="text" name="username"  class="form-control" id="text" placeholder="01/01/62"required> <br>
+                        <input type="date" class="form-control" id="text" placeholder="วันที่"required> <br>
                     <label>รายละเอียดการปฏิบัติงาน</label>
                         <textarea name="address" cols="80" rows="10"></textarea>
                     <label>ปัญหา</label>

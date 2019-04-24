@@ -48,7 +48,8 @@
   </style>
     <!-- Bootstrap -->
     <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/3.4.1/css/bootstrap.min.css" integrity="sha384-HSMxcRTRxnN+Bdg0JdbxYKrThecOKuH5zCYotlSAcp1+c8xmyTe9GYg1l9a69psu" crossorigin="anonymous">
-
+    <!--  jQuery -->
+    <script type="text/javascript" src="https://code.jquery.com/jquery-1.11.3.min.js"></script>
     <!-- HTML5 shim and Respond.js for IE8 support of HTML5 elements and media queries -->
     <!-- WARNING: Respond.js doesn't work if you view the page via file:// -->
     <!--[if lt IE 9]>
@@ -84,22 +85,32 @@
                         </ul>
                     </div>
                     </div>
-            <div class="btn pull-right ">
-                <div class="dropdown">
-                    <span class=" dropdown-toggle" id="register" data-toggle="dropdown" role="button" aria-hidden="true">
-                    ลงทะเบียน
-                    <span  class="caret" >
-                    </span></span>
-                    <ul class="dropdown-menu" id="para2">
-                        <li><a href="registerstu">นักศึกษา</a></li>
-                        <li><a href="registertea">อาจารย์</a></li>
-                        <li><a href="registeroff">เจ้าหน้าที่</a></li>
-                        <li><a href="registercom">สถานประกอบการ</a></li>
-                    </ul>
+                <div class="btn pull-right ">
+                    <div class="dropdown">
+                        <span class=" dropdown-toggle" id="register" data-toggle="dropdown" role="button" aria-hidden="true">
+                        ลงทะเบียน
+                        <span  class="caret" >
+                        </span></span>
+                        <ul class="dropdown-menu" id="para2">
+                            <li><a href="registerstu">นักศึกษา</a></li>
+                            <li><a href="registertea">อาจารย์</a></li>
+                            <li><a href="registeroff">เจ้าหน้าที่</a></li>
+                            <li><a href="registercom">สถานประกอบการ</a></li>
+                        </ul>
+                    </div>
                 </div>
-            </div>
-            <div class="btn pull-right ">
-                    <a href="index" id="register">รายชื่อสถานประกอบการ</a>
+                <div class="btn pull-right ">
+                    <div class="dropdown">
+                            <span class=" dropdown-toggle" id="register" data-toggle="dropdown" role="button" aria-hidden="true">
+                            รายชื่อ
+                            <span  class="caret" ></span>
+                            </span>
+                        <ul class="dropdown-menu" id="para2">
+                            <li><a href="">สถานประกอบการ</a></li>
+                            <li><a href="">นักศึกษาออกฝึกงาน</a></li>
+                            <li><a href="">นักศึกษายื่นเรื่องฝึกงาน</a></li>
+                        </ul>
+                    </div>
                 </div>
           </ul>
         </div><!--/.nav-collapse -->

@@ -25,6 +25,7 @@
                 <label>E-mail</label>
                     <input type="text" name="email" class="form-control" id="text" placeholder="E-mail "> <br>
 
+                <img src="img/Desert.jpg"  class="img-thumbnail">
             </div>
 
     <!-- jQuery (necessary for Bootstrap's JavaScript plugins) -->
