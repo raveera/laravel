@@ -1,36 +1,41 @@
 @extends('layouts.index')
 @section('title', 'รายชื่อสถานประกอบการ')
+
 @section('content')
   <div class="container" id="body2">
-<table class="table">
-  <thead class="thead-dark">
-  <table class="table table-hover table-bordered">
-    <p id="black">รายชื่อสถานประกอบการ</p>
-    <thead>
-    <tr>
-      <th scope="col" class="text-center">ลำดับที่</th>
-      <th scope="col" class="text-center">สถานประกอบการ</th>
-      <th scope="col" class="text-center">รายละเอียด</th>
-      <th scope="col" class="text-center">ที่อยู่</th>
-      <th scope="col" class="text-center">เบอร์โทร</th>
-      <th scope="col" class="text-center">จำนวนที่รับ</th>
-      <th scope="col" class="text-center">คลิกดูรายละเอียด</th>
-    </tr>
-  </thead>
-  <tbody>
-    @foreach ($companys as $row )
-        <tr>
-            <td>{{ $row['id'] }}</td>
-            <td>{{ $row['namecom'] }}</td>
-            <td>{{ $row['detail'] }}</td>
-            <td>{{ $row['address'] }}</td>
-            <td>{{ $row['tel'] }}</td>
-            <td>{{ $row['num'] }}</td>
-            <td align="center"><a href="reportcoop"><button id="black1">คลิก</button></a></td>
-        </tr>
-    @endforeach
-  </tbody>
-</table>
+    @if(session()->get('success'))
+        <div class="alert alert-success">
+        {{ session()->get('success') }}
+        </div><br />
+    @endif
+
+        <p id="black">รายชื่อสถานประกอบการ</p>
+        <table class="table table-hover table-bordered">
+            <thead class="thead-dark">
+                <tr>
+                    <td>ลำดับที่</td>
+                    <td>ชื่อสถานประกอบการ</td>
+                    <td>รายละเอียดงาน</td>
+                    <td>ที่อยู่</td>
+                    <td>เบอร์โทร</td>
+                    <td>จำนวนที่รับ</td>
+                    <td colspan="2">คลิกดูรายละเอียด</td>
+                </tr>
+            </thead>
+        <tbody>
+            @foreach ($companys as $company )
+                <tr>
+                    <td>{{ $company['id'] }}</td>
+                    <td>{{ $company['name'] }}</td>
+                    <td>{{ $company['detail'] }}</td>
+                    <td>{{ $company['address'] }}</td>
+                    <td>{{ $company['tel'] }}</td>
+                    <td>{{ $company['number'] }}</td>
+                    <td><a href="{{ route('company.edit',$company->id)}}" class="btn btn-primary">คลิก</a></td>
+                </tr>
+            @endforeach
+        </tbody>
+        </table>
     <!-- jQuery (necessary for Bootstrap's JavaScript plugins) -->
     <script src="https://code.jquery.com/jquery-1.12.4.min.js" integrity="sha384-nvAa0+6Qg9clwYCGGPpDQLVpLNn0fRaROjHqs13t4Ggj3Ez50XnGQqc/r8MhnRDZ" crossorigin="anonymous"></script>
     <!-- Include all compiled plugins (below), or include individual files as needed -->

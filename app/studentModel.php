@@ -4,17 +4,18 @@ namespace App;
 
 use Illuminate\Database\Eloquent\Model;
 
-class officer extends Model
+class studentModel extends Model
 {
     protected $fillable = [
         'username',
         'password',
+        'code',
         'name',
-        'faculty',
-        'course',
         'branch',
+        'faculty',
+        'year',
         'address',
         'tel',
-        'e-mail'
+        'email'
       ];
 }

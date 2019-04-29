@@ -92,10 +92,10 @@
                         <span  class="caret" >
                         </span></span>
                         <ul class="dropdown-menu" id="para2">
-                            <li><a href="registerstu">นักศึกษา</a></li>
-                            <li><a href="registertea">อาจารย์</a></li>
+                            <li><a href="{{ route('students.create') }}">นักศึกษา</a></li>
+                            <li><a href="">อาจารย์</a></li>
                             <li><a href="registeroff">เจ้าหน้าที่</a></li>
-                            <li><a href="registercom">สถานประกอบการ</a></li>
+                            <li><a href="{{ route('company.create') }}">สถานประกอบการ</a></li>
                         </ul>
                     </div>
                 </div>

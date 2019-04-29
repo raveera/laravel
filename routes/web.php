@@ -16,3 +16,6 @@ Route::get('/', function () {
 });
 
 Route::resource('students', 'studentController');
+
+Route::resource('company', 'companyController');
+

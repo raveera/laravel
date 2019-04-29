@@ -3,9 +3,9 @@
 namespace App\Http\Controllers;
 
 use Illuminate\Http\Request;
-use App\studentModel;
+use App\companyModel;
 
-class studentController extends Controller
+class companyController extends Controller
 {
     /**
      * Display a listing of the resource.
@@ -14,7 +14,8 @@ class studentController extends Controller
      */
     public function index()
     {
-        //
+        $companys = companyModel::all();
+        return view('company-list', compact('companys'));
     }
 
     /**
@@ -24,7 +25,7 @@ class studentController extends Controller
      */
     public function create()
     {
-        return view('registerstu');
+        return view('registercom');
     }
 
     /**
@@ -36,33 +37,32 @@ class studentController extends Controller
     public function store(Request $request)
     {
         $request->validate([
-            'student_username'=>'required',
-            'student_password'=> 'required',
-            'student_code' => 'required',
-            'student_name' => 'required',
-            'student_branch' => 'required',
-            'student_faculty' => 'required',
-            'student_year' => 'required',
-            'student_address' => 'required',
-            'student_tel' => 'required',
-            'student_email' => 'required'
+            'company_username'=>'required',
+            'company_password'=> 'required',
+            'company_name' => 'required',
+            'company_detail' => 'required',
+            'company_number' => 'required',
+            'company_address' => 'required',
+            'company_tel' => 'required',
+            'company_name_mentor' => 'required',
+            'company_tel_mentor' => 'required',
+            'company_email' => 'required'
           ]);
-          $student = new studentModel([
-            'username' => $request->get('student_username'),
-            'password'=> $request->get('student_password'),
-            'code'=> $request->get('student_code'),
-            'name'=> $request->get('student_name'),
-            'branch'=> $request->get('student_branch'),
-            'faculty'=> $request->get('student_faculty'),
-            'year'=> $request->get('student_year'),
-            'address'=> $request->get('student_address'),
-            'tel'=> $request->get('student_tel'),
-            'email'=> $request->get('student_email')
+          $company = new companyModel([
+            'username' => $request->get('company_username'),
+            'password'=> $request->get('company_password'),
+            'name'=> $request->get('company_name'),
+            'detail'=> $request->get('company_detail'),
+            'number'=> $request->get('company_number'),
+            'address'=> $request->get('company_address'),
+            'tel'=> $request->get('company_tel'),
+            'name_mentor'=> $request->get('company_name_mentor'),
+            'tel_mentor'=> $request->get('company_tel_mentor'),
+            'email'=> $request->get('company_email')
           ]);
-          $student->save();
-          return redirect('/students')->with('success', 'Stock has been added');
+          $company->save();
+          return redirect('/company')->with('success', 'ลงทะเบียนเรียบร้อย');
     }
-
 
     /**
      * Display the specified resource.
