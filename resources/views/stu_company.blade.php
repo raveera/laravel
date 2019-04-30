@@ -23,7 +23,7 @@
       <td>ร้านอัพเกรด</td>
       <td>คอมพิวเตอร์ธุรกิจ</td>
       <td>4 มีนาคม 2562</td>
-      <td align="center"><a href="reportcoop"><button id="black1">คลิกดูรายละเอียด</button></a></td>
+      <td align="center"><a href="reportcoop"><button class="btn btn-sm btn-primary" type="submit">คลิกดูรายละเอียด</button></a></td>
     </tr>
 
   </tbody>

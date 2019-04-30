@@ -5,7 +5,7 @@
     <div class="container col-md-4" ></div>
     <div class="container col-md-4">
       <form class="form-signin">
-        <h2 class="form-signin-heading" align="center">เข้าสู่ระบบสถานประกอบ</h2>
+        <h3 class="form-signin-heading" align="center">เข้าสู่ระบบสถานประกอบการ</h3>
         <label>Username</label>
         <input type="text" id="inputEmail" class="form-control" placeholder="Username" required="" autofocus=""> <br>
         <label>Password</label>

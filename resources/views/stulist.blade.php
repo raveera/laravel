@@ -7,21 +7,21 @@
   <table class="table table-hover table-bordered">
     <p>รายชื่อนักศึกษาที่ยื่นเรื่องขอฝึกงาน</p>
     <thead>
-    <tr>
-      <th scope="col">รายชื่อ</th>
-      <th scope="col">คณะ</th>
-      <th scope="col">สาขาวิชา</th>
-      <th scope="col">รายละเอียดงาน</th>
-      <th scope="col">เกรดเฉลี่ย</th>
+    <tr >
+      <td scope="col" align="center">รายชื่อ</td>
+      <td scope="col" align="center">คณะ</td>
+      <td scope="col" align="center">สาขาวิชา</td>
+      <td scope="col" align="center">สถานประกอบการ</td>
+      <td scope="col" align="center">อนุญาต</td>
     </tr>
   </thead>
-  <tbody>
+  <tbody >
     <tr>
       <td scope="row">นายเก้าอี้  โต๊ะคอม</td>
       <td>วจก.</td>
       <td>คอมพิวเตอร์ธุรกิจ</td>
-      <td><button type="submit" value="Submit">ดูรายละเอียด</button></td>
-      <td>3.11</td>
+      <td>ร้านซ่อมคอม</td>
+      <td align="center"><button class="btn btn-sm btn-primary" type="submit">อนุญาต</button></td>
     </tr>
 
   </tbody>

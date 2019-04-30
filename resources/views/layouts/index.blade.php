@@ -66,7 +66,7 @@
             <span class="icon-bar"></span>
             <span class="icon-bar"></span>
           </button>
-            <a class="navbar-brand" href="index" id="p1">ระบบสหกิจ YRU</a>
+            <a class="navbar-brand" href="/" id="p1">ระบบสหกิจ YRU</a>
         </div>
         <div id="navbar" class="navbar-collapse collapse">
           <ul class="nav navbar-nav navbar-right">
@@ -93,8 +93,7 @@
                         </span></span>
                         <ul class="dropdown-menu" id="para2">
                             <li><a href="{{ route('students.create') }}">นักศึกษา</a></li>
-                            <li><a href="">อาจารย์</a></li>
-                            <li><a href="registeroff">เจ้าหน้าที่</a></li>
+                            <li><a href="{{ route('teacher.create') }}">อาจารย์ / เจ้าหน้าที่</a></li>
                             <li><a href="{{ route('company.create') }}">สถานประกอบการ</a></li>
                         </ul>
                     </div>
@@ -106,9 +105,9 @@
                             <span  class="caret" ></span>
                             </span>
                         <ul class="dropdown-menu" id="para2">
-                            <li><a href="">สถานประกอบการ</a></li>
-                            <li><a href="">นักศึกษาออกฝึกงาน</a></li>
-                            <li><a href="">นักศึกษายื่นเรื่องฝึกงาน</a></li>
+                            <li><a href="{{ route('company.index') }}">สถานประกอบการ</a></li>
+                            <li><a href="{{ route('teacher.index') }}">นักศึกษาออกฝึกงาน</a></li>
+                            <li><a href="/stulist">นักศึกษายื่นเรื่องฝึกงาน</a></li>
                         </ul>
                     </div>
                 </div>

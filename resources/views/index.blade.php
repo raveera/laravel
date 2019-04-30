@@ -4,15 +4,8 @@
     <div class="container">
         <h3 id="body"><b>ข่าวประชาสัมพันธ์<b></h3>
             <div class="jumbotron">
-                <table class="table table-hover table-bordered">
-                    <p>ข่าวประชาสัมพันธ์</p>
-                    <tbody>
-                        <tr>บริษัท รับสมัครพนักงาน</tr>
-                        <br>
-                        <tr>บริษัท รับสมัครพนักงาน</tr>
-                    </tbody>
-                </table>
-                <img src="test.jpg" class="img-responsive" >
+
+
             </div>
     </div>
     <!-- jQuery (necessary for Bootstrap's JavaScript plugins) -->

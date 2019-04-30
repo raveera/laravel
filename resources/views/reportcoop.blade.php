@@ -12,7 +12,7 @@
       <th scope="col" class="text-center">สถานประกอบการ</th>
       <th scope="col" class="text-center">งานที่ปฏิบัติประจำวัน</th>
       <th scope="col" class="text-center">ปัญหา / การแก้ปัญหา</th>
-      <th scope="col" class="text-center">ผู้นิเทศ</th>
+
     </tr>
   </thead>
   <tbody>
@@ -21,7 +21,7 @@
       <td >ร้านอัพเกรด</td>
       <td >ซ่อมคอมพิวเตอร์</td>
       <td >-</td>
-      <td >อาจารย์ทรงเผ่า</td>
+
     </tr>
 
     <tr>
@@ -29,7 +29,7 @@
       <td >ร้านอัพเกรด</td>
       <td >ซ่อมคอมพิวเตอร์</td>
       <td >-</td>
-      <td >อาจารย์ทรงเผ่า</td>
+
     </tr>
 
   </tbody>

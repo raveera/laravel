@@ -1,8 +1,9 @@
 @extends('layouts.index')
-@section('title', 'ลงทะเบียนอาจารย์ / เจ้าหน้าที่')
+@section('title', 'ลงทะเบียนสถานประกอบการ')
 
 @section('content')
-    <form method="POST" action="{{ route('teacher.store') }}">
+        <form method="POST" action="{{ route('company.update', $company->id) }}">
+            @method('PATCH')
             @csrf
             <div class="container" id="body2">
                 <h2 class="form-signin-heading" id="blackhead" align="center">@yield('title')</h2><hr>
@@ -15,17 +16,17 @@
                                     </ul>
                                 </div><br />
                     @endif
-                    <div class="col-md-12">
+                        <div class="col-md-12">
                             <div class="col-md-5 col-md-offset-1">
                                 <h4 id="body"><b>บัญชีลงทะเบียน </b></h4>
                                     <div class="form-group">
                                         <label for="username">ชื่อผู้ใช้ *</label>
-                                        <input type="text" class="form-control" name="teacher_username" id="text" placeholder="ชื่อผู้ใช้" autofocus required/>
+                                        <input type="text" class="form-control" name="company_username" id="text" placeholder="ชื่อผู้ใช้" value={{ $company->username }} readonly >
                                     </div>
                                     <div class="form-group">
                                         <!-- Password field -->
                                         <label for="password">รหัสผ่าน *</label>
-                                        <input type="password" class="form-control" name="teacher_password" id="myInput" placeholder="รหัสผ่าน"required/>
+                                        <input type="password" class="form-control" name="company_password" id="myInput" placeholder="รหัสผ่าน" value={{ $company->password }}>
                                         <!-- An element to toggle between password visibility -->
                                         <input type="checkbox" onclick="myFunction()" id="showpass"><label for="showpass"> แสดงรหัสผ่าน</label>
                                         <script>
@@ -41,39 +42,47 @@
                                     </div>
                             </div>
                             <div class="col-md-5 ">
-                                <h4 id="body"><b>ข้อมูลส่วนตัวอาจารย์ / เจ้าหน้าที่<b></h4>
+                                <h4 id="body"><b>ข้อมูลสถานประกอบการ<b></h4>
                                     <div class="form-group">
-                                        <label for="name">ชื่อ - นามสกุล*</label>
-                                        <input type="text" class="form-control" name="teacher_name" id="text" placeholder="ชื่อ-สกุล"required />
+                                        <label for="name">ชื่อสถานประกอบการ *</label>
+                                        <input type="text" class="form-control" name="company_name" id="text"  value={{ $company->name }} >
                                     </div>
                                     <div class="form-group">
-                                        <label for="faculty">คณะ *</label>
-                                        <input type="text" class="form-control" name="teacher_faculty" id="text" placeholder="คณะ"/>
+                                        <label for="detail">รายละเอียดงาน *</label>
+                                        <input type="text" class="form-control" name="company_detail" id="text" placeholder="รายละเอียดงาน" value={{ $company->detail }}>
                                     </div>
                                     <div class="form-group">
-                                        <label for="course">หลักสูตร *</label>
-                                        <input type="text" class="form-control" name="teacher_course" id="text" placeholder="หลักสูตร"/>
+                                        <label for="number">จำนวนที่รับ *</label>
+                                        <input type="text" class="form-control" name="company_number" id="text" placeholder="จำนวนที่รับ" value={{ $company->number }}>
                                     </div>
                                     <div class="form-group">
-                                        <label for="branch">สาขาวิชา *</label>
-                                        <input type="text" class="form-control" name="teacher_branch" id="text" placeholder="สาขาวิชา"/>
+                                        <label for="address">ที่อยู่ปัจจุบัน *</label>
+                                        <input type="text" class="form-control" name="company_address" id="text" placeholder="ที่อยู่ปัจจุบัน" value={{ $company->address }}>
                                     </div>
                                     <div class="form-group">
-                                        <label for="address">ที่อยู่ปัจจุบัน*</label>
-                                        <input type="text" class="form-control" name="teacher_address" id="text" placeholder="ที่อยู่ปัจจุบัน"/>
+                                        <label for="tel">เบอร์โทรศัพท์ติดต่อ (สถานประกอบการ)*</label>
+                                        <input type="text" class="form-control" name="company_tel" id="text" placeholder="เบอร์โทรศัพท์ติดต่อ (สถานประกอบการ)" value={{ $company->tel }}>
                                     </div>
                                     <div class="form-group">
-                                        <label for="tel">เบอร์โทรศัพท์*</label>
-                                        <input type="text" class="form-control" name="teacher_tel" id="text" placeholder="เบอร์โทรศัพท์"/>
+                                        <label for="name_mentor">ชื่อพี่เลี้ยงนักศึกษา *</label>
+                                        <input type="text" class="form-control" name="company_name_mentor" id="text" placeholder="ชื่อพี่เลี้ยงนักศึกษา" value={{ $company->name_mentor }}>
+                                    </div>
+                                    <div class="form-group">
+                                        <label for="tel_mentor">เบอร์โทรศัพท์ติดต่อ (พี่เลี้ยง) *</label>
+                                        <input type="text" class="form-control" name="company_tel_mentor" id="text" placeholder="เบอร์โทรศัพท์ติดต่อ (พี่เลี้ยง)" value={{ $company->tel_mentor }}>
                                     </div>
                                     <div class="form-group">
                                         <label for="email">E-mail *</label>
-                                        <input type="text" class="form-control" name="teacher_email" id="text" placeholder="E-mail"/>
+                                        <input type="text" class="form-control" name="company_email" id="text" placeholder="E-mail" value={{ $company->email }}>
+                                    </div>
+                                    <div class="form-group">
+                                        <label for="image">เพิ่มรูปสถานประกอบการ</label>
+                                        <input type="file" accept="image/*" name="company_image" capture>
                                     </div>
                             </div>
                             <div align="center" >
                                 <label >
-                                    <button class="btn btn-lg btn-primary btn" type="submit">บันทึก</button>
+                                    <button class="btn btn-lg btn-primary btn" type="submit">อัพเดท</button>
                                     <button class="btn btn-lg btn-defult btn"><a href="login">ยกเลิก</button></a>
                                 </label>
                             </div>
@@ -81,12 +90,9 @@
 
             </div>
         </form>
-
     <!-- jQuery (necessary for Bootstrap's JavaScript plugins) -->
     <script src="https://code.jquery.com/jquery-1.12.4.min.js" integrity="sha384-nvAa0+6Qg9clwYCGGPpDQLVpLNn0fRaROjHqs13t4Ggj3Ez50XnGQqc/r8MhnRDZ" crossorigin="anonymous"></script>
     <!-- Include all compiled plugins (below), or include individual files as needed -->
     <script src="https://stackpath.bootstrapcdn.com/bootstrap/3.4.1/js/bootstrap.min.js" integrity="sha384-aJ21OjlMXNL5UyIl/XNwTMqvzeRMZH2w8c5cRVpzpU8Y5bApTppSuUkhZXN0VxHd" crossorigin="anonymous"></script>
-
-
 
 @endsection

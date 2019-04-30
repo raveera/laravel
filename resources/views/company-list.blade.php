@@ -13,25 +13,33 @@
         <table class="table table-hover table-bordered">
             <thead class="thead-dark">
                 <tr>
-                    <td>ลำดับที่</td>
-                    <td>ชื่อสถานประกอบการ</td>
-                    <td>รายละเอียดงาน</td>
-                    <td>ที่อยู่</td>
-                    <td>เบอร์โทร</td>
-                    <td>จำนวนที่รับ</td>
-                    <td colspan="2">คลิกดูรายละเอียด</td>
+
+                    <td align="center">ชื่อสถานประกอบการ</td>
+                    <td align="center">รายละเอียดงาน</td>
+                    <td align="center">ที่อยู่</td>
+                    <td align="center">เบอร์โทร</td>
+                    <td align="center">จำนวนที่รับ</td>
+                    <td colspan="2" align="center"></td>
+
                 </tr>
             </thead>
         <tbody>
             @foreach ($companys as $company )
                 <tr>
-                    <td>{{ $company['id'] }}</td>
+
                     <td>{{ $company['name'] }}</td>
                     <td>{{ $company['detail'] }}</td>
                     <td>{{ $company['address'] }}</td>
                     <td>{{ $company['tel'] }}</td>
                     <td>{{ $company['number'] }}</td>
-                    <td><a href="{{ route('company.edit',$company->id)}}" class="btn btn-primary">คลิก</a></td>
+                    <td align="center"><a href="{{ route('company.edit',$company->id)}}" class="btn btn-primary">แก้ไข</a></td>
+                    <td align="center">
+                        <form action="{{ route('company.destroy', $company->id)}}" method="post">
+                        @csrf
+                        @method('DELETE')
+                        <button class="btn btn-danger" type="submit" >ลบข้อมูล</button>
+                        </form>
+                    </td>
                 </tr>
             @endforeach
         </tbody>
