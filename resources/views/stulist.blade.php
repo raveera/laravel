@@ -12,7 +12,7 @@
       <td scope="col" align="center">คณะ</td>
       <td scope="col" align="center">สาขาวิชา</td>
       <td scope="col" align="center">สถานประกอบการ</td>
-      <td scope="col" align="center">อนุญาต</td>
+      <td colspan="2" align="center">Action</td>
     </tr>
   </thead>
   <tbody >
@@ -21,7 +21,10 @@
       <td>วจก.</td>
       <td>คอมพิวเตอร์ธุรกิจ</td>
       <td>ร้านซ่อมคอม</td>
-      <td align="center"><button class="btn btn-sm btn-primary" type="submit">อนุญาต</button></td>
+      <td align="center">
+        <button class="btn btn-sm btn-primary" type="submit">อนุญาต</button>
+        <a href="reason"><button class="btn btn-sm btn-danger" type="submit">ไม่อนุญาต</button></a>
+      </td>
     </tr>
 
   </tbody>

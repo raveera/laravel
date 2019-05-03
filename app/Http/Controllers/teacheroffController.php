@@ -58,7 +58,7 @@ class teacheroffController extends Controller
             'email'=> $request->get('teacher_email')
           ]);
           $teacheroff->save();
-          return redirect('/teacher')->with('success', 'ลงทะเบียนเรียบร้อย');
+          return redirect('/index');
     }
 
     /**

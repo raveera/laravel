@@ -3,12 +3,6 @@
 
 @section('content')
   <div class="container" id="body2">
-    @if(session()->get('success'))
-        <div class="alert alert-success">
-        {{ session()->get('success') }}
-        </div><br />
-    @endif
-
         <p id="black">รายชื่อสถานประกอบการ</p>
         <table class="table table-hover table-bordered">
             <thead class="thead-dark">
@@ -19,30 +13,21 @@
                     <td align="center">ที่อยู่</td>
                     <td align="center">เบอร์โทร</td>
                     <td align="center">จำนวนที่รับ</td>
-                    <td colspan="2" align="center">Action</td>
+                    <td colspan="2" align="center"></td>
 
                 </tr>
             </thead>
         <tbody>
-            @foreach ($companys as $company )
                 <tr>
 
-                    <td>{{ $company['name'] }}</td>
-                    <td>{{ $company['detail'] }}</td>
-                    <td>{{ $company['address'] }}</td>
-                    <td>{{ $company['tel'] }}</td>
-                    <td>{{ $company['number'] }}</td>
-                    <td align="center">
-                        <a href="{{ route('company.edit',$company->id)}}" class="btn btn-primary">แก้ไข</a></td>
-                    <td align="center">
-                        <form action="{{ route('company.destroy', $company->id)}}" method="post">
-                        @csrf
-                        @method('DELETE')
-                        <button class="btn btn-danger" type="submit" >ลบข้อมูล</button>
-                        </form>
-                    </td>
+                    <td>บริษัทนามสมมติ</td>
+                    <td>รับซ่อมประกอบคอมพิวเตอร์</td>
+                    <td>38/5 ถ.ผังเมือง 4 อ.เมือง จ.ยะลา</td>
+                    <td>0847364483</td>
+                    <td>3</td>
+                    <td align="center"><a href="" class="btn btn-primary">เลือก</a></td>
+
                 </tr>
-            @endforeach
         </tbody>
         </table>
     <!-- jQuery (necessary for Bootstrap's JavaScript plugins) -->

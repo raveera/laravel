@@ -15,6 +15,10 @@ Route::get('/', function () {
     return view('index');
 });
 
+Route::get('/index', function () {
+    return view('index');
+});
+
 Route::resource('students', 'studentController');
 
 Route::resource('company', 'companyController');
@@ -51,4 +55,17 @@ Route::get('/savenote', function () {
 
 Route::get('/stu_company', function () {
     return view('stu_company');
+});
+
+Route::get('/reason', function () {
+    return view('reason');
+});
+
+
+Route::get('/notrecompany-list', function () {
+    return view('notregistercompany-list');
+});
+
+Route::get('/notreloginstu', function () {
+    return view('notregisterloginstu');
 });

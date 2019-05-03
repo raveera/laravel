@@ -78,7 +78,8 @@
                         <span  class="caret" >
                         </span></span>
                         <ul class="dropdown-menu" id="para2">
-                            <li><a href="loginstu">นักศึกษา</a></li>
+                            <li><a href="loginstu">นักศึกษา(ออกฝึกงานแล้ว)</a></li>
+                            <li><a href="notreloginstu">นักศึกษา(ยังไม่ออกฝึกงาน)</a></li>
                             <li><a href="logintea">อาจารย์</a></li>
                             <li><a href="loginoff">เจ้าหน้าที่</a></li>
                             <li><a href="logincom">สถานประกอบการ</a></li>
@@ -107,7 +108,7 @@
                         <ul class="dropdown-menu" id="para2">
                             <li><a href="{{ route('company.index') }}">สถานประกอบการ</a></li>
                             <li><a href="{{ route('teacher.index') }}">นักศึกษาออกฝึกงาน</a></li>
-                            <li><a href="/stulist">นักศึกษายื่นเรื่องฝึกงาน</a></li>
+                            <li><a href="stulist">นักศึกษายื่นเรื่องฝึกงาน</a></li>
                         </ul>
                     </div>
                 </div>
@@ -118,8 +119,3 @@
     @yield('content')
 </body>
 </html>
-
-
-
-
-

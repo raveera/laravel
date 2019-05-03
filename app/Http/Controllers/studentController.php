@@ -60,7 +60,7 @@ class studentController extends Controller
             'email'=> $request->get('student_email')
           ]);
           $student->save();
-          return redirect('/students')->with('success', 'Stock has been added');
+          return redirect('/index');
     }
 
 

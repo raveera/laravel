@@ -43,6 +43,13 @@
                             <div class="col-md-5 ">
                                 <h4 id="body"><b>ข้อมูลส่วนตัวอาจารย์ / เจ้าหน้าที่<b></h4>
                                     <div class="form-group">
+                                        <label for="year">เลือก:</label>
+                                            <select class="form-control" id="text" name="tea_or_off">
+                                                <option >อาจารย์</option>
+                                                <option>เจ้าหน้าที่</option>
+                                            </select>
+                                    </div>
+                                    <div class="form-group">
                                         <label for="name">ชื่อ - นามสกุล*</label>
                                         <input type="text" class="form-control" name="teacher_name" id="text" placeholder="ชื่อ-สกุล"required />
                                     </div>
